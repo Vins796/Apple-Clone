@@ -1,0 +1,245 @@
+/* ! Reset */
+
+body, html{ font-size: 16px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif; box-sizing: border-box;margin: 0;padding: 0;}
+*,*:before,*:after{ box-sizing: border-box; }
+h1,h2,h3,h4,h5,h6, p, ol, ul{margin: 0;padding: 0;}
+ol,ul{list-style-type: none;}
+img{height: auto;}
+a{text-decoration: none;}
+hr{border:none; border-bottom: 1px solid #ddd}
+
+body {font-family: 'Inter', sans-serif;}
+
+
+/* ! title system */
+
+.text-0 {font-size: 5rem;}
+h1, .text-1{font-size: 3rem;}
+h2 {font-size: 2.2rem;}
+.text-2{font-size: 1.2rem; font-weight: 400;}
+h3, .text-3{font-size: 1.5rem;}
+h4, .text-4, p{font-size: 0.9rem;}
+
+.font-normal {font-weight: 400;}
+
+h1, h2, h3, h4, p, ol, ul {margin-bottom: 1rem;}
+
+h1, h2, h3 {letter-spacing: -2px;}
+
+
+/* ! button system */
+
+.button {
+    font-size: 1.2rem; background: transparent; color: #0066CC; 
+    padding: 14px 25px; display: inline-block;
+    position: relative;
+}
+
+.button img {position: absolute; top: 50%; right: 8px; transform: translateY(-40%); width: 16px;}
+
+.button:hover {text-decoration: underline;} 
+
+
+/* ! il doppio trattino rappresenta un modifier */
+
+.button--red {background: red;} 
+.button--small {padding: 10px 10px; font-size: 0.2rem;}
+.button--round {background: #fff; color: #000; padding: 15px 20px; border-radius: 100px; font-weight: bold;}
+.button--round-outline {background: transparent; color: #fff; padding: 15px 20px; border-radius: 100px; font-weight: bold; border: 1px solid #fff;}
+
+
+
+/* ! components 
+---------------------------------------------------------------*/
+
+
+
+/* ! header */
+
+.header__hamburger {display: none;}
+
+
+.header-container {background: #333;}
+.header {display: flex; justify-content: space-between; max-width: 1250px; margin: 0 auto;}
+
+.header__menu {margin-bottom: 0; width: 100%; text-align: center; display: flex; justify-content: center; align-items: center;}
+.header__menu li{display: inline-block;}
+.header__menu li a {color: #fff; display: block; padding: 15px; font-size: 0.8rem; color:#eee; display: flex; align-items: center;}
+.header__logo {font-weight: bold; width: 30%; display: flex; justify-content: left;} 
+
+.header__icons {width: 30%; display: flex; justify-content: flex-end; align-items: center;}
+
+@media (max-width: 768px) {
+    .header__hamburger{display: block; height: 40px; width: 30%; padding: 6px;}
+    .header__hamburger span {height: 2px; width: 26px; margin-top: 8px; background: #fff; display: block;}
+
+    body {padding-top: 40px;}
+
+    .header-container {position: fixed; top: 0; left: 0; z-index: 99; width: 100%;}
+    .header__menu{background: #333; display: block; position: absolute; top: 40px; left:-100%; z-index: 99; height: 100vh;}
+    .header__menu li {display: block; padding: 5px;}  
+    .header__menu li a {border-top: 1px solid #eee; padding: 4%;}  
+
+    .header__logo {justify-content: center;}
+}
+
+/* media-text */
+
+.media-text {background: #eee;}
+
+
+/* ! cover */
+
+.cover {
+    text-align: center;
+    background: #000; padding: 20px 20px 0;
+    display: flex; flex-flow: column; 
+    justify-content: flex-start; align-items: center;  /*justifycontent per asse verticale alignitems per asse orizzontale */
+}
+
+
+.cover__content {margin: 0 auto;}
+.cover p {color: rgb(110, 110, 115);}
+
+.cover--image {min-height: 600px; color: #fff; justify-content: flex-end;}
+.cover--image .cover__content {max-width: 1250px; width: 100%; text-align: left;}
+.cover--image h1 {font-size: 2.4rem;}
+.cover--image h2 {font-size: 1.4rem; text-transform: uppercase; font-weight: normal;}
+
+.cover--white {
+    height: 950px;
+    color: #000;
+    text-align: center;
+    background: #000; 
+    padding: 20px 20px 0;
+    display: flex; flex-flow: column; 
+    justify-content: flex-start; align-items: center;
+}
+
+.cover--white h1 {color: #000;}
+.cover--white h2 {color:#000;}
+.cover--white p {color: rgb(110, 110, 115);}
+
+.bg-dark p {color: rgb(110, 110, 115);}
+
+@media (max-width: 768px) {
+    .cover img {margin-bottom: -4px;}
+    .cover--white {margin-top: 0px; max-height: 450px; padding: 10px;}
+    .ipad-cover {margin-top: 32px;}
+}
+
+
+/* ! tiles */
+
+.tiles {position: relative; min-height: 500px; border-radius: 30px; color: #fff; overflow: hidden;} 
+.tiles__label {position: absolute; bottom: 30px; left: 30px; text-transform: uppercase;}
+.tiles__content {
+    padding: 30px;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
+}
+
+
+/* ! card */
+
+.card {background: #fbfbfd; padding: 5px; border-radius: 15px; text-align: center;}
+
+
+
+/* ! footer */
+
+.footer {background: #eee; padding-top: 30px;}
+
+.footer h3 {font-size: 1.2rem;}
+.footer p {font-size: 0.8rem;}
+
+
+
+/* ! grid system */
+
+.grid {display: flex; flex-wrap: wrap; max-width: 1250px; margin: 0 auto;}
+.grid--small {max-width: 900px;}
+.grid--center {justify-content: center;}
+
+.col-20 {width: 20%;}
+.col-25 {width: 25%;}
+.col-30 {width: 30%;}
+.col-33 {width: 33.33%;}
+.col-40 {width: 40%;}
+.col-50 {width: 50%;}
+.col-60 {width: 60%;}
+.col-70 {width: 70%;}
+.col-80 {width: 80%;}
+.col-90 {width: 90%;}
+.col-100 {width: 100%;}
+
+
+/*! trick per selezionare più elementi uguali */
+
+[class*='col-']{padding: 10px;} 
+
+
+
+@media (max-width: 768px) {
+    [class*='col-'] {width: 100%;}
+    .sma-33 {width: 33.33%;}
+    .sma-50 {width: 50%;}
+    .sma-25 {width: 25%;}
+}
+
+
+/* ! helpers system*/
+
+.br {border: 1px solid red;}
+
+.img-res {width: 100%;}
+
+.mt-0 {margin-top: 0;}
+.mt-1 {margin-top: 1rem;}
+.mt-2 {margin-top: 2rem;}
+.mt-3 {margin-top: 3rem;}
+.mt-4 {margin-top: 4rem;}
+
+.mb-0 {margin-bottom: 0;}
+.mb-1 {margin-bottom: 1rem;}
+.mb-2 {margin-bottom: 2rem;}
+.mb-3 {margin-bottom: 3rem;}
+.mb-4 {margin-bottom: 4rem;}
+
+.pt-0 {padding-top: 0;}
+.pt-1 {padding-top: 1rem;}
+.pt-2 {padding-top: 2rem;}
+.pt-3 {padding-top: 3rem;}
+.pt-4 {padding-top: 4rem;}
+
+.pb-0 {padding-bottom: 0;}
+.pb-1 {padding-bottom: 1rem;}
+.pb-2 {padding-bottom: 2rem;}
+.pb-3 {padding-bottom: 3rem;}
+.pb-4 {padding-bottom: 4rem;}
+
+.p-0 {padding: 0;}
+.p-1 {padding: 1rem;}
+.p-2 {padding: 2rem;}
+.p-3 {padding: 3rem;}
+.p-4 {padding: 4rem;}
+
+.icon-small {width: 40px; padding: 8px;}
+.icon-white {filter: invert(1);}
+
+.text-center {text-align: center;}
+.text-left {text-align: left;}
+.text-right {text-align: right;}
+
+.text-white {color: #fff;}
+.text-black {color: #000;}
+
+.v-center {display: flex; justify-content: center; flex-flow: column;}
+
+.bg-dark {background: #000;}
+.bg-light {background: rgb(251, 251, 253);}
+
+.none {display: none;}
+@media (max-width: 768px) {
+    .sma-none {display: none;}
+}
